@@ -21,7 +21,6 @@ Usage: ./calib [IMAGES_PATH BOARD_SIZE NUMBER_OF_CORNERS_X NUMBER_OF_CORNERS_Y]
 # The images are in ./data
 # Cells measure 2.5cm
 # Board has 5x7 corners
-
 ```
 
 ## Sample output
