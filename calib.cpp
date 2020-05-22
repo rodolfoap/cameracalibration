@@ -46,12 +46,12 @@ int main(int argc, char** argv) {
 	std::vector<cv::Mat> rvecs, tvecs;
 	double rms = cv::calibrateCamera(obj_points, img_points, images[0].size(), K, dist_coeff, rvecs, tvecs);
 
-	// Generate results
-	std::cerr<<"Results:"<<std::endl;
+	// Show results
+	std::cerr<<std::endl<<"Results:"<<std::endl;
 	std::cerr<<"Number of applied images: "<<img_points.size()<<std::endl;
 	std::cerr<<"RMS error: "<<rms<<std::endl;
-	std::cerr<<"Camera matrix (K): "<<std::endl<<K<<std::endl;
-	std::cerr<<"Distortion coefficients (k1, k2, p1, p2, k3, ...): "<<std::endl<<dist_coeff.t()<<std::endl;
+	std::cerr<<"Camera matrix (K):"<<std::endl<<K<<std::endl;
+	std::cerr<<"Distortion coefficients (k1, k2, p1, p2, k3, ...):"<<std::endl<<dist_coeff.t()<<std::endl;
 
 	// Generate yaml file
 	cv::FileStorage fs("camera_matrix.yaml", cv::FileStorage::WRITE);
